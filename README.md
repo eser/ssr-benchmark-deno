@@ -1,6 +1,6 @@
 # SSR Framework Benchmark (Deno Edition)
 
-It's a Deno variant of [SSR Framework Benchmark] originally developed by [Ekin Koc](https://github.com/eknkc).
+It's a Deno variant of [SSR Framework Benchmark](https://github.com/eknkc/ssr-benchmark) originally developed by [Ekin Koc](https://github.com/eknkc).
 
 The original work is an experiment in response to https://twitter.com/thdxr/status/1777782835249553517 where it is stated that Next.JS is a lot slower on server side rendering compared to Vanilla React.
 
@@ -8,13 +8,11 @@ This is not a comprehensive or scientific test. Just wanted to compare each in a
 
 ## Results
 
-┌───────┬────────────┬─────────┬─────────────────────┬──────────┬─────────┬────────────────────┐
-│ (idx) │ name       │ ops/sec │ average (ms)        │ margin   │ samples │ relative to preact │
-├───────┼────────────┼─────────┼─────────────────────┼──────────┼─────────┼────────────────────┤
-│     0 │ "preact"   │    2321 │ 0.43075173565645114 │ "±0.45%" │   23216 │ ""                 │
-│     1 │ "solid-js" │     464 │ 2.1547274624326884  │ "±3.24%" │    4645 │ "5.00 x slower"    │
-│     2 │ "react"    │     190 │ 5.249411071916024   │ "±0.44%" │    1905 │ "12.22 x slower"   │
-└───────┴────────────┴─────────┴─────────────────────┴──────────┴─────────┴────────────────────┘
+| (idx) |    name    | ops/sec |    average (ms)     |  margin  | samples | relative to preact |
+| ----- | ---------- | ------- | ------------------- | -------- | ------- | ------------------ |
+| 0     | "preact"   | 2321    | 0.43075173565645114 | "±0.45%" | 23216   |                    |
+| 1     | "solid-js" | 464     | 2.1547274624326884  | "±3.24%" | 4645    | "5.00 x slower"    |
+| 2     | "react"    | 190     | 5.249411071916024   | "±0.44%" | 1905    | "12.22 x slower"   |
 
 ## Test Environment
 
