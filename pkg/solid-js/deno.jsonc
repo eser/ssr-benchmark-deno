@@ -1,0 +1,7 @@
+{
+  "nodeModulesDir": true,
+  "lock": true,
+  "tasks": {
+    "build": "deno run -A npm:vite build --ssr ./src/entry-server.tsx"
+  }
+}
