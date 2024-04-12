@@ -41,7 +41,7 @@ const handler = (_request) => {
   stream.pipeTo(writable);
   return Promise.resolve(new Response(readable, {
     headers: {
-      "content-type": "text/plain"
+      "content-type": "text/html; charset=utf-8"
     }
   }));
 };

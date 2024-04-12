@@ -1,4 +1,4 @@
-import * as preactRenderToString from 'npm:preact-render-to-string@^6.4.2';
+import * as PreactRenderToString from 'npm:preact-render-to-string@^6.4.2';
 import { jsx, jsxs } from 'npm:preact/jsx-runtime';
 
 const data = Array(1e3).fill(0).map((_, _i) => ({
@@ -35,10 +35,10 @@ async function App() {
 }
 
 const handler = async (_request) => {
-  const html = await preactRenderToString.renderToStringAsync(await App());
+  const html = await PreactRenderToString.renderToStringAsync(await App());
   return new Response(html, {
     headers: {
-      "content-type": "text/plain"
+      "content-type": "text/html; charset=utf-8"
     }
   });
 };

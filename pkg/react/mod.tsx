@@ -5,6 +5,6 @@ export const handler = async (_request: Request): Promise<Response> => {
   const stream = await ReactDOMServer.renderToReadableStream(<App />); // , { bootstrapScripts: ['/main.js'] }
 
   return new Response(stream, {
-    headers: { "content-type": "text/plain" },
+    headers: { "content-type": "text/html; charset=utf-8" },
   });
 };

@@ -3,8 +3,8 @@
   "packages": {
     "specifiers": {
       "npm:@babel/plugin-transform-react-jsx": "npm:@babel/plugin-transform-react-jsx@7.23.4_@babel+core@7.24.4",
-      "npm:@preact/preset-vite@^2.8.2": "npm:@preact/preset-vite@2.8.2_@babel+core@7.24.4_vite@5.2.8",
-      "npm:preact": "npm:preact@10.19.2",
+      "npm:@preact/preset-vite@^2.8.2": "npm:@preact/preset-vite@2.8.2_@babel+core@7.24.4_vite@5.2.8_preact@10.20.2",
+      "npm:preact": "npm:preact@10.20.2",
       "npm:vite": "npm:vite@5.2.8",
       "npm:vite@^5.2.8": "npm:vite@5.2.8"
     },
@@ -330,13 +330,13 @@
           "@jridgewell/sourcemap-codec": "@jridgewell/sourcemap-codec@1.4.15"
         }
       },
-      "@preact/preset-vite@2.8.2_@babel+core@7.24.4_vite@5.2.8": {
+      "@preact/preset-vite@2.8.2_@babel+core@7.24.4_vite@5.2.8_preact@10.20.2": {
         "integrity": "sha512-m3tl+M8IO8jgiHnk+7LSTFl8axdPXloewi7iGVLdmCwf34XOzEUur0bZVewW4DUbUipFjTS2CXu27+5f/oexBA==",
         "dependencies": {
           "@babel/core": "@babel/core@7.24.4",
           "@babel/plugin-transform-react-jsx": "@babel/plugin-transform-react-jsx@7.23.4_@babel+core@7.24.4",
           "@babel/plugin-transform-react-jsx-development": "@babel/plugin-transform-react-jsx-development@7.22.5_@babel+core@7.24.4",
-          "@prefresh/vite": "@prefresh/vite@2.4.5_preact@10.19.2_vite@5.2.8",
+          "@prefresh/vite": "@prefresh/vite@2.4.5_preact@10.20.2_vite@5.2.8",
           "@rollup/pluginutils": "@rollup/pluginutils@4.2.1",
           "babel-plugin-transform-hook-names": "babel-plugin-transform-hook-names@1.0.2_@babel+core@7.24.4",
           "debug": "debug@4.3.4",
@@ -353,25 +353,25 @@
         "integrity": "sha512-uG3jGEAysxWoyG3XkYfjYHgaySFrSsaEb4GagLzYaxlydbuREtaX+FTxuIidp241RaLl85XoHg9Ej6E4+V1pcg==",
         "dependencies": {}
       },
-      "@prefresh/core@1.5.2_preact@10.19.2": {
+      "@prefresh/core@1.5.2_preact@10.20.2": {
         "integrity": "sha512-A/08vkaM1FogrCII5PZKCrygxSsc11obExBScm3JF1CryK2uDS3ZXeni7FeKCx1nYdUkj4UcJxzPzc1WliMzZA==",
         "dependencies": {
-          "preact": "preact@10.19.2"
+          "preact": "preact@10.20.2"
         }
       },
       "@prefresh/utils@1.2.0": {
         "integrity": "sha512-KtC/fZw+oqtwOLUFM9UtiitB0JsVX0zLKNyRTA332sqREqSALIIQQxdUCS1P3xR/jT1e2e8/5rwH6gdcMLEmsQ==",
         "dependencies": {}
       },
-      "@prefresh/vite@2.4.5_preact@10.19.2_vite@5.2.8": {
+      "@prefresh/vite@2.4.5_preact@10.20.2_vite@5.2.8": {
         "integrity": "sha512-iForDVJ2M8gQYnm5pHumvTEJjGGc7YNYC0GVKnHFL+GvFfKHfH9Rpq67nUAzNbjuLEpqEOUuQVQajMazWu2ZNQ==",
         "dependencies": {
           "@babel/core": "@babel/core@7.24.4",
           "@prefresh/babel-plugin": "@prefresh/babel-plugin@0.5.1",
-          "@prefresh/core": "@prefresh/core@1.5.2_preact@10.19.2",
+          "@prefresh/core": "@prefresh/core@1.5.2_preact@10.20.2",
           "@prefresh/utils": "@prefresh/utils@1.2.0",
           "@rollup/pluginutils": "@rollup/pluginutils@4.2.1",
-          "preact": "preact@10.19.2",
+          "preact": "preact@10.20.2",
           "vite": "vite@5.2.8"
         }
       },
@@ -700,8 +700,8 @@
           "source-map-js": "source-map-js@1.2.0"
         }
       },
-      "preact@10.19.2": {
-        "integrity": "sha512-UA9DX/OJwv6YwP9Vn7Ti/vF80XL+YA5H2l7BpCtUr3ya8LWHFzpiO5R+N7dN16ujpIxhekRFuOOF82bXX7K/lg==",
+      "preact@10.20.2": {
+        "integrity": "sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==",
         "dependencies": {}
       },
       "resolve@1.22.8": {

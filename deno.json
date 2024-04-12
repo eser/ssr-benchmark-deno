@@ -1,7 +1,7 @@
 {
   "lock": false,
   "tasks": {
-    "build": "deno task --cwd ./pkg/solid-js build && deno task --cwd ./pkg/preact build",
+    "build": "deno task --cwd ./pkg/solid-js build && deno task --cwd ./pkg/preact-vite build",
     "start": "deno task build && deno run -A --v8-flags=--max-old-space-size=8192 main.ts"
   }
 }

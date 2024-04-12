@@ -9,7 +9,7 @@ export const handler = (_request: Request): Promise<Response> => {
 
   return Promise.resolve(
     new Response(readable, {
-      headers: { "content-type": "text/plain" },
+      headers: { "content-type": "text/html; charset=utf-8" },
     }),
   );
 };

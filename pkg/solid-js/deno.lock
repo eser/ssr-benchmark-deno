@@ -2,7 +2,6 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "npm:solid-js": "npm:solid-js@1.8.16_seroval@1.0.5",
       "npm:vite": "npm:vite@5.2.8",
       "npm:vite-plugin-solid@^2.10.2": "npm:vite-plugin-solid@2.10.2_solid-js@1.8.16__seroval@1.0.5_vite@5.2.8_@babel+core@7.24.4",
       "npm:vite@^5.2.8": "npm:vite@5.2.8"

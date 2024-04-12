@@ -1,7 +1,11 @@
 {
-  "nodeModulesDir": true,
-  "lock": true,
-  "tasks": {
-    "build": "deno run -A npm:vite build --ssr ./src/entry-server.tsx"
+  "nodeModulesDir": false,
+  "lock": false,
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "custom"
+  },
+  "imports": {
+    "custom/jsx-runtime": "./jsx-runtime.ts"
   }
 }

@@ -1,4 +1,5 @@
 import * as react from "./pkg/react/mod.tsx";
+import * as preact from "./pkg/preact/mod.ts";
 // import * as fresh from "./pkg/fresh/mod.ts";
 import { TinyBench } from "./deps.ts";
 
@@ -8,15 +9,20 @@ const main = async () => {
       name: "react",
       handler: react.handler,
     },
-    // {
-    //   name: "fresh",
-    //   handler: fresh.handler,
-    // },
     {
       name: "preact",
-      handler: await import("./pkg/preact/dist/entry-server.mjs").then((x) =>
-        x.handler
-      ),
+      handler: preact.handler,
+    },
+    {
+      name: "fresh",
+      // temporarily disabled due to import maps
+      handler: () => {}, // fresh.handler,
+    },
+    {
+      name: "preact-vite",
+      handler: await import("./pkg/preact-vite/dist/entry-server.mjs").then((
+        x,
+      ) => x.handler),
     },
     {
       name: "solid-js",
@@ -27,8 +33,8 @@ const main = async () => {
   ];
 
   const bench = new TinyBench.Bench({
-    // iterations: 1,
-    time: 10_000,
+    iterations: 3,
+    // time: 10_000,
   });
   const req = new Request("http://localhost:8080");
 
@@ -61,19 +67,29 @@ const main = async () => {
     };
   });
 
-  const results = table
-    .map((x) => ({ ...x, "ops/sec": x["ops/sec"] }))
-    .toSorted((a, b) => b["ops/sec"] - a["ops/sec"]);
+  const maxOps = Math.max(
+    ...table.filter((x) => !Number.isNaN(x["ops/sec"])).map((x) =>
+      x["ops/sec"]
+    ),
+  );
 
-  const maxOps = Math.max(...results.map((x) => x["ops/sec"]));
+  const results = table.toSorted((a, b) => {
+    if (Number.isNaN(b["ops/sec"])) {
+      return -1;
+    }
+
+    return b["ops/sec"] - a["ops/sec"];
+  });
+  const best = results[0];
 
   console.table(
-    results.map((x, i) => ({
-      ...x,
-      [`relative to ${results[0]["name"]}`]: i === 0
-        ? ""
-        : `${(maxOps / x["ops/sec"]).toFixed(2)} x slower`,
-    })),
+    results
+      .map((x, i) => ({
+        ...x,
+        [`relative to ${best["name"]}`]: i === 0 || Number.isNaN(x["ops/sec"])
+          ? "-"
+          : `${(maxOps / x["ops/sec"]).toFixed(2)} x slower`,
+      })),
   );
   console.log();
 };
